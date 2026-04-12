@@ -1,94 +1,59 @@
-# AI Engineering Company Project — Student Template
+<div align="center">
+    <img src="./Cecilia_Perdomo.png" alt="Banner Cecilia Perdomo">
+</div>
 
-[![4Geeks Academy](https://img.shields.io/badge/4Geeks-Academy-blue)](https://4geeksacademy.com)
-[![AI Engineering](https://img.shields.io/badge/track-AI%20Engineering-green)](https://4geeksacademy.com/es/programas-de-carrera/ingenieria-ia)
+# Brasaland  
+Cadena de restaurantes a la parrilla, Colombia + Florida
 
-_Base template for transversal projects in the AI Engineering Career Program — 4Geeks Academy._
+## 🎯 El Desafío
+Tu empresa lleva años operando exitosamente de forma tradicional, pero el mundo ha cambiado. Los clientes buscan información en línea antes de tomar decisiones. Los competidores ya tienen presencia digital. Y tu empresa, a pesar de su experiencia y calidad, sigue siendo invisible en internet.
 
-> _Instrucciones disponibles en español en [README.es.md](./README.es.md)._
+La dirección ha decidido iniciar la transformación digital. Tu tarea es construir el primer punto de contacto digital de la empresa: un sitio web público profesional que presente lo que hacen y capture información de personas interesadas a través de un formulario de aplicación o registro.
 
----
+Este sitio debe funcionar en cualquier dispositivo, cumplir con estándares de accesibilidad web, estar optimizado para motores de búsqueda, y presentar una experiencia de usuario pulida y profesional. No es solo "una página bonita" — es el primer paso hacia la modernización de una empresa que quiere seguir siendo relevante.
 
-## Purpose
+### Instrucciones
+Como sabes, hemos decidido dar el salto a lo digital. Necesitamos lanzar nuestro sitio web público lo antes posible. Revisa el CONTEXT.md para entender exactamente qué hace nuestra empresa y qué información necesitamos capturar de las personas interesadas.
 
-This repository is the **starter template** for transversal projects. You will work on real company scenarios (Brasaland, TrackFlow, Nexova), building deliverables that map to course milestones (Web, Programming, Backend, Telemetry, RAG, Agents, Workflows, Real-time).
+El sitio debe tener dos partes:
 
-- Create a template from this repository.
-- Replace the placeholder `CONTEXT.md` with your assigned company context.
-- Use `skills/` and the directory-level `README.md` files as working guidance.
+1. Landing page — Una página de presentación con:
+    - Encabezado con navegación clara
+    - Sección hero que explique qué hacemos y por qué nos deberían elegir
+    - Sección destacando nuestras características principales o beneficios clave (basados en nuestra experiencia en el sector)
+    - Información de contacto o llamado a la acción
+    - Pie de página profesional
+2. Formulario de aplicación/registro — Una página separada donde las personas puedan:
+    - Completar sus datos personales
+    - Proporcionar la información específica que necesitamos (ver CONTEXT.md)
+    - Enviar su aplicación (no necesitas conectarlo a nada todavía, solo validar los datos)
 
----
+#### Requisitos técnicos que debes cumplir:
+- Responsive: debe verse bien en móvil, tablet y escritorio
+- Accesible: usa HTML semántico, etiquetas ARIA cuando sea necesario, y atributos alt en imágenes
+- Optimizado para SEO: implementa Schema.org para marcar la información de la empresa
+- Validación completa del formulario con JavaScript — todos los campos deben validarse antes de "enviar"
+- Mensajes de error claros cuando algo no esté correcto
+- Usa Tailwind CSS para todo el diseño. No quiero ver CSS personalizado escrito a mano a menos que sea absolutamente necesario.
 
-## Current status of the template
+## Estructura básica
 
-The repository currently provides a **base folder structure and documentation skeleton**. It does not include runnable apps or global scripts yet.
+- /
+- ├── index.html (landing page)
+- ├── application.html (formulario de aplicación/registro)
+- ├── styles.css (solo si Tailwind CDN no es suficiente)
+- └── validation.js (lógica de validación del formulario)
 
-- `CONTEXT.md` is a placeholder and must be replaced with your assigned company context.
-- There is no root `AGENTS.md` yet.
-- Shared package metadata exists in `packages/shared/package.json` (`@repo/shared-types`), but no workspace runner is configured at root.
-
----
-
-## Repository structure
-
-```text
-ai-engineering-company-project-template/
-├── README.md
-├── README.es.md
-├── CONTEXT.md                # Placeholder to be replaced with assigned context
-├── agents/                   # Agent patterns/templates and tools docs
-├── apps/                     # Product apps (web, APIs, dashboards)
-├── data/                     # raw, process, pipelines, eval
-├── docs/                     # Project and architecture documentation
-├── packages/
-│   └── shared/               # Shared package (@repo/shared-types)
-├── scripts/                  # Script conventions/documentation
-├── shared/                   # Shared assets/conventions at repo level
-├── skills/                   # Reusable agent skills
-└── workflows/                # Automation/orchestration documentation
+## Live version
+Para ver el proyecto en vivo 🌐
+- **Opción 1**: Servidor HTTP simple
+```bash
+cd apps/web
+python -m http.server 8000
 ```
+- **Opción 2**: Live Server (Si usas extensión de VS Code)
+    - Instala la extensión "Live Server"
+    - Click derecho en index.html → "Open with Live Server"
 
----
-
-## How to start
-
-1. **Use this repository as a template** and create your own project repo.
-2. **Clone** your repository (or open it in Codespaces).
-3. **Replace** `CONTEXT.md` with the full context for your assigned company.
-4. **Review** each top-level folder `README.md` to understand intended responsibilities (`apps/`, `data/`, `skills/`, etc.).
-5. **Start implementing** milestone deliverables in `apps/`, reusing `packages/shared/` and `data/` as needed.
-
----
-
-## Milestones (reference)
-
-| Milestone | Focus        | Typical deliverables                        |
-| --------- | ------------ | ------------------------------------------- |
-| 0         | Prework      | Environment setup, first prompts            |
-| 1         | Web          | Corporate website, forms, SEO               |
-| 2         | Programming  | Business logic, scoring, calculations       |
-| 3         | AI-driven UI | AI-generated interfaces                     |
-| 4         | Next.js      | Portals, loyalty app, operations UI         |
-| 5         | Backend      | Central API (locations, menus, sales, etc.) |
-| 6         | Telemetry    | Data pipeline, dashboards                   |
-| 7         | RAG & Memory | Semantic knowledge base, search             |
-| 8         | Agents       | Support, onboarding, training agents        |
-| 9         | Workflows    | n8n automations                             |
-| 10        | Real-time    | Live dashboards, alerts, streaming          |
-
----
-
-## Links
-
-- [4Geeks Academy — AI Engineering](https://4geeksacademy.com/es/programas-de-carrera/ingenieria-ia)
-- [How to start a coding project](https://4geeks.com/lesson/how-to-start-a-project)
-
----
-
-## Contributors
-
-This template was built as part of the 4Geeks Academy AI Engineering Career Program by [@marcogonzalo](https://www.linkedin.com/in/marcogonzalo) and [@alezanchezr](https://x.com/alesanchezr) and many other contributors. Find out more about our [AI Engineering Course](https://4geeksacademy.com/en/career-programs/ai-engineering), and [other courses](https://4geeksacademy.com/en/program-comparison).
-
-You can find other templates and resources like this at the [4Geeks Academy GitHub page](https://github.com/4geeksacademy).
-
-_This template is maintained by 4Geeks Academy for the AI Engineering track. For exclusive use in the programme._
+## Desarrollo web
+💻 Cecilia Perdomo - 12 de Abril de 2026
