@@ -17,13 +17,13 @@ Como sabes, hemos decidido dar el salto a lo digital. Necesitamos lanzar nuestro
 
 El sitio debe tener dos partes:
 
-1. Landing page — Una página de presentación con:
+1. **Landing page**: Una página de presentación con:
     - Encabezado con navegación clara
     - Sección hero que explique qué hacemos y por qué nos deberían elegir
     - Sección destacando nuestras características principales o beneficios clave (basados en nuestra experiencia en el sector)
     - Información de contacto o llamado a la acción
     - Pie de página profesional
-2. Formulario de aplicación/registro — Una página separada donde las personas puedan:
+2. **Formulario de aplicación/registro**: Una página separada donde las personas puedan:
     - Completar sus datos personales
     - Proporcionar la información específica que necesitamos (ver CONTEXT.md)
     - Enviar su aplicación (no necesitas conectarlo a nada todavía, solo validar los datos)
@@ -56,4 +56,4 @@ python -m http.server 8000
     - Click derecho en index.html → "Open with Live Server"
 
 ## Desarrollo web
-💻 Cecilia Perdomo - 12 de Abril de 2026
+💻 [Cecilia Perdomo](https://portfolio-cecilia.vercel.app/) - 12 de Abril de 2026
