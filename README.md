@@ -5,6 +5,10 @@
 # Brasaland  
 Cadena de restaurantes a la parrilla, Colombia + Florida
 
+<div align="center">
+    <img src="./apps/web/assets/image01.jpg" alt="Banner Brasaland">
+</div>
+
 ## 🎯 El Desafío
 Tu empresa lleva años operando exitosamente de forma tradicional, pero el mundo ha cambiado. Los clientes buscan información en línea antes de tomar decisiones. Los competidores ya tienen presencia digital. Y tu empresa, a pesar de su experiencia y calidad, sigue siendo invisible en internet.
 
