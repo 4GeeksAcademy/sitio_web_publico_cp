@@ -79,11 +79,20 @@ if (form && emailInput && passwordInput && emailError && passwordError && succes
 		if (!isEmailValid || !isPasswordValid) {
 			event.preventDefault();
 			hideSuccessMessage();
+
+			if (!isEmailValid) {
+				emailInput.focus();
+			} else if (!isPasswordValid) {
+				passwordInput.focus();
+			}
+
 			return;
 		}
 
 		event.preventDefault();
+		hideSuccessMessage();
 		successMessage.classList.remove('hidden');
+		successMessage.focus();
 		form.reset();
 
 		redirectTimer = setTimeout(() => {

@@ -80,7 +80,7 @@
          <ul class="flex items-center gap-6 text-sm font-medium sm:text-base">
             <li><a href="./index.html#acerca" class="transition-colors hover:text-amber-700">Acerca de nosotros</a></li>
             <li><a href="./index.html#contacto" class="transition-colors hover:text-amber-700">Contacto</a></li>
-            <li><a href="./application.html" class="font-semibold text-amber-700">Registro</a></li>
+            <li><a href="./application.html" aria-current="page" class="font-semibold text-amber-700">Registro</a></li>
          </ul>
       </nav>
    </header>
@@ -129,10 +129,10 @@
          </div>
 
          <div class="rounded-3xl border border-slate-200 bg-white p-7 shadow-xl shadow-slate-200/60 sm:p-8">
-            <h2 class="text-2xl font-bold text-slate-900">Registro de usuario</h2>
+            <h2 id="register-form-title" class="text-2xl font-bold text-slate-900">Registro de usuario</h2>
             <p class="mt-2 text-sm text-slate-600">Completa los campos para crear tu cuenta.</p>
 
-            <form id="register-form" class="mt-8 space-y-6" action="#" method="post" aria-label="Formulario de registro Brasaland" novalidate>
+            <form id="register-form" class="mt-8 space-y-6" action="#" method="post" aria-labelledby="register-form-title" novalidate>
                <div class="space-y-2">
                   <label for="email" class="text-sm font-semibold text-slate-800">Correo electrónico</label>
                   <input
@@ -144,9 +144,10 @@
                      required
                      placeholder="tuemail@ejemplo.com"
                      aria-describedby="email-error"
+                     aria-invalid="false"
                      class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:border-amber-500 focus:outline-none focus:ring-4 focus:ring-amber-100"
                   >
-                  <p id="email-error" class="hidden text-sm font-medium text-red-600" aria-live="polite"></p>
+                  <p id="email-error" class="hidden text-sm font-medium text-red-600" role="alert" aria-live="assertive" aria-atomic="true"></p>
                </div>
 
                <div class="space-y-2">
@@ -159,11 +160,12 @@
                      minlength="8"
                      required
                      placeholder="Mínimo 8 caracteres"
-                     aria-describedby="password-error"
+                     aria-describedby="password-hint password-error"
+                     aria-invalid="false"
                      class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:border-amber-500 focus:outline-none focus:ring-4 focus:ring-amber-100"
                   >
-                  <p id="password-error" class="hidden text-sm font-medium text-red-600" aria-live="polite"></p>
-                  <p class="text-xs text-slate-500">Usa al menos 8 caracteres con letras y números.</p>
+                  <p id="password-error" class="hidden text-sm font-medium text-red-600" role="alert" aria-live="assertive" aria-atomic="true"></p>
+                  <p id="password-hint" class="text-xs text-slate-500">Usa al menos 8 caracteres con letras y números.</p>
                </div>
 
                <button
@@ -173,7 +175,7 @@
                   Crear cuenta
                </button>
 
-               <p id="success-message" class="hidden rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm font-semibold text-emerald-700" aria-live="polite">
+               <p id="success-message" class="hidden rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm font-semibold text-emerald-700" role="status" aria-live="polite" aria-atomic="true" tabindex="-1">
                   Usuario registrado.
                </p>
 
